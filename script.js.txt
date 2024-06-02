@@ -1,0 +1,30 @@
+JavaScript (script.js)
+```
+const musicians = [
+  { name: "John Mayer", genre: "Pop" },
+  { name: "Eric Clapton", genre: "Blues" },
+  { name: "Adele", genre: "Soul" },
+  // Add more musicians here
+];
+
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
+
+searchInput.addEventListener("input", searchMusicians);
+
+function searchMusicians() {
+  const query = searchInput.value.toLowerCase();
+  const results = musicians.filter(musician => {
+    const name = musician.name.toLowerCase();
+    return name.includes(query);
+  });
+  displayResults(results);
+}
+
+function displayResults(results) {
+  const html = results.map(musician => {
+    return `<div class="result">${musician.name} (${musician.genre})</div>`;
+  }).join("");
+  searchResults.innerHTML = html;
+}
+```

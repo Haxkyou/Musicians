@@ -1,0 +1,18 @@
+HTML (index.html)
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicians Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Musicians Search</h1>
+  <input id="search-input" type="text" placeholder="Search for a musician">
+  <div id="search-results"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+```
